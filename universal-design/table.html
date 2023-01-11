@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Accessible Table</title>
+    <style>
+        table, th, td {
+            border-collapse: collapse;
+        }
+        caption {
+            padding-bottom: 10px;
+        }
+        td {
+            border-collapse: collapse;
+            border: 2px solid red;
+            padding-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><strong>Accessible Table</strong></h1>
+        <time datetime="2022-10-3">October 3rd, 2022</time> 
+    </header>
+    <section>
+        <h2><em>Accessible table data</em></h2>
+        <table>
+            <caption>Animals that can kill you</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Lions</th>
+                    <th scope="col">Tigers</th>
+                    <th scope="col">Bears</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Simba</td>
+                    <td>Tigger</td>
+                    <td>Winney</td>
+                </tr>
+                <tr>
+                    <td>Cecil</td>
+                    <td>Tygra</td>
+                    <td>Baloo</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

@@ -1,0 +1,26 @@
+header {
+    font-family: 'Merriweather'
+}
+
+body {
+    font-family: 'Nunito Sans';
+    font-size: 18px;
+}
+
+.sr-only {
+    border:0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    white-space: inherit;
+}
+
+.skip-link {
+    background: black;
+    color: #fff;
+    font-weight: 700;
+    padding: 4px;
+    position: absolute;
+    transform: translateY(-200%);
+}

@@ -1,0 +1,149 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+    font-family: 'Merriweather';
+}
+
+body {
+  background: rgb(255, 255, 255);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+    font-size: 1cm;
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  /* font-family: 'David Libre', serif;
+  font-weight: 500;
+  font-size: 1.5em; */
+  padding: 1.3em 0;
+}
+
+h2 {font-size:1.25em;}
+
+header,
+nav,
+main,
+aside,
+footer {
+  padding: 1.5em;
+  border: 1px black solid;
+}
+
+nav {
+    font-size: medium;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+.video {
+    position: absolute; 
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto; 
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgb(255, 255, 255);
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns:
+   1fr       1fr       1fr;
+  grid-template-areas:
+  "heady     heady     heady"
+  "navvy     navvy     navvy"
+  "mainy     mainy     mainy"
+  "aside1    aside2    aside3"
+  "aside1    aside2    aside3"
+  "footy     footy     footy";
+}
+
+header {grid-area: heady; background:rgb(255, 255, 255);}
+nav {grid-area: navvy; background:rgb(0, 0, 0);}
+main {grid-area: mainy; background: rgb(255, 255, 255); max-height: 100%;}
+#aside1 {grid-area: aside1; background: #C30F2A;}
+#aside2 {grid-area: aside2; background: #F9F7F6;}
+#aside3 {grid-area: aside3; background: #a6a6ac;}
+footer {grid-area: footy; background: #F9F7F6;}
+
+nav ul {
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-around;
+}
+
+nav ul li {
+  list-style: none
+}
+
+@media screen
+  and (min-width: 641px)
+  and (max-width: 900px)  {
+.container {
+grid-template-columns:
+   1fr 1fr;
+grid-template-areas:
+  "heady heady"
+  "navvy navvy"
+  "mainy mainy"
+  "aside1 aside2"
+  "aside3 aside3"
+  "footy footy";
+}
+}
+
+@media screen
+  and (max-width: 640px)  {
+.container {
+grid-template-columns:
+   1fr;
+grid-template-areas:
+  "heady"
+  "mainy"
+  "aside1"
+  "aside2"
+  "aside3"
+  "navvy"
+  "footy";
+}
+nav ul {
+  flex-flow: column nowrap;
+  text-align: center;
+}
+nav ul li a {
+  display: block;
+  padding: 10px 5px;
+  margin: 5px;
+  border: 1px black solid;
+  background: #a6a6ac;
+}
+}
